@@ -1,0 +1,10 @@
+{
+  "description": "Interactive Arabic flashcard game helping university students link academic knowledge with professional skills through engaging, multidisciplinary challenges.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
