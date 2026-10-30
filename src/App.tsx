@@ -410,7 +410,7 @@ function Icon({
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`brand ${compact ? "brand-compact" : ""}`}>
-      <img src="/nexus-logo.png" alt="شعار NEXUS" />
+      <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="شعار NEXUS" />
       {!compact && (
         <div>
           <strong>Skill Challenge</strong>

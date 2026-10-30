@@ -404,7 +404,7 @@ function surpriseScore(kept: string[]) {
 function Brand() {
   return (
     <div className="rescue-brand">
-      <img src="/nexus-logo.png" alt="شعار NEXUS" />
+      <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="شعار NEXUS" />
       <span>BEYOND THE CLASSROOM</span>
     </div>
   )
