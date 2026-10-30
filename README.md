@@ -1,44 +1,23 @@
-# beyond-the-classroom
-An interactive educational card game that helps university students connect academic knowledge, professional skills, and practical application through real-world challenges and reflective learning.
+# Beyond the Classroom — أنقذ المشروع!
 
-# Beyond the Classroom 🎯
-### From Lecture Halls to the Job Market
+An Arabic, right-to-left event game that helps university students practise time management, constructive communication, teamwork, and adaptability through a project-rescue story.
 
-**Know It. Apply It. Master It.**
+## Play modes
 
-## 💡 About the Idea
+- **Quick solo round:** start immediately without registration or personal information.
+- **Two-team competition:** teams take turns on the same device. Only short team names are requested, and the first team's results stay hidden until the second team finishes.
 
-Beyond the Classroom is an interactive educational card game designed to help university students discover the connection between academic knowledge, professional skills, and practical application.
+Each round has four connected challenges and 180 seconds of active play. Feedback and team handoffs pause the timer. Every challenge awards up to 25 deterministic points; decision quality determines the score, with remaining time used only to break a tie between teams.
 
-The idea began with a question:
+The game includes prioritization with reordering controls, a simulated message builder, task delegation with workload limits, and a deadline-change decision. Keyboard/touch alternatives are available for drag interactions. Sound is muted by default, fullscreen is optional, and reduced-motion preferences are respected.
 
-**How can we help students recognize the gap between what they learn in the classroom and what they need to apply in the workplace, without simply telling them about it?**
+The 30 existing educational cards remain available in **استكشف المهارات**. Game scenarios and scoring are local; no messages are sent and no backend or AI service is used.
 
-Instead of relying on traditional awareness methods, I wanted to create an engaging experience where students could explore this gap themselves through interactive challenges, realistic scenarios, and thoughtful discussions.
+## Development
 
-The goal is not to prioritize practical skills over academic knowledge, but to emphasize that both are essential and complement each other. Academic knowledge provides the foundation, while professional skills and practical application help students put that knowledge into action.
-
-## 🎮 How the Game Works
-
-The game features **30 challenge cards** divided into three learning tracks, alongside **16 practical topics**.
-
-Players choose a card, read the challenge, think about a possible solution, and discuss their reasoning. They can earn points based on the game's rules while exploring the skill behind each scenario, why it matters, and how it can be developed.
-
-Each challenge is designed to encourage reflection beyond simply choosing an answer. The experience helps students consider the difference between knowing a skill and applying it in real-life situations.
-
-## 🧩 The Three Learning Tracks
-
-### 📚 1. Academic Knowledge
-Challenges focus on academic concepts and knowledge, encouraging students to think critically, evaluate information, and use evidence to support their decisions.
-
-### 💼 2. Professional Skills
-Scenarios explore professional behaviors such as communication, responsibility, clarity, and decision-making in situations students may encounter in the workplace.
-
-### 🛠️ 3. Practical Application
-Challenges encourage students to apply their knowledge and skills to realistic situations, solve problems, collaborate with others, and respond constructively to challenges.
-
-## 🎯 The Purpose
-
-Beyond the Classroom aims to help students:
-
-- Recognize the relationship between academic learning and workplace expectations
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm run build
+pnpm exec tsc --noEmit
+```

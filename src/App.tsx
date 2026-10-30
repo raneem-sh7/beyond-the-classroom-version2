@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react"
+import RescueGame from "./RescueGame"
 
 type CardKind = "academic" | "professional" | "application"
 
@@ -14,7 +15,7 @@ type GameCard = {
   rubric?: string[]
 }
 
-const kinds: Record<CardKind, { label: string short: string letter: string }> =
+const kinds: Record<CardKind, { label: string; short: string; letter: string }> =
   {
     academic: {
       label: "المعرفة الأكاديمية",
@@ -549,7 +550,7 @@ function PrintSheets({
   )
 }
 
-export default function App() {
+function LegacyApp() {
   const [filter, setFilter] = useState<"all" | CardKind>("all")
   const [selectedId, setSelectedId] = useState(1)
   const [flipped, setFlipped] = useState(false)
@@ -851,4 +852,8 @@ export default function App() {
       </div>
     </main>
   )
+}
+
+export default function App() {
+  return <RescueGame cards={cards} kinds={kinds} />
 }
