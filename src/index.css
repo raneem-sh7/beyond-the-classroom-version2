@@ -10,7 +10,7 @@
   --yellow: #f5c542;
   --yellow-pale: #fff7d7;
   --white: #ffffff;
-  --paper: #f5f7fa;
+  --paper: var(--navy);
   --ink: #10213e;
   --muted: #60708b;
   --line: #dbe3ed;
@@ -446,7 +446,7 @@ footer div i {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--blue);
+  color: var(--blue-bright);
   font-size: 12px;
   font-weight: 800;
 }
@@ -466,10 +466,20 @@ footer div i {
   line-height: 1.3;
 }
 
+.how-to .section-heading h2,
+.collection .section-heading h2 {
+  color: var(--white);
+}
+
 .section-heading p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.how-to .section-heading p,
+.collection .section-heading p {
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .steps {
@@ -957,7 +967,7 @@ footer div i {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 11px;
 }
 

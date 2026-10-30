@@ -7,11 +7,11 @@
   --rescue-muted: #60708b;
   --rescue-line: #dbe3ed;
   min-height: 100vh;
-  padding: 0 24px 24px;
+  padding: 0;
   color: var(--rescue-ink);
   background:
     radial-gradient(ellipse at 50% 0, rgba(74, 175, 227, 0.08), transparent 40%),
-    #f5f7fa;
+    var(--rescue-navy);
 }
 
 .rescue-app button,
@@ -25,12 +25,13 @@
 
 .rescue-header {
   display: flex;
-  width: min(1200px, 100%);
+  width: 100%;
   min-height: 88px;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  border-bottom: 1px solid var(--rescue-line);
+  padding-inline: max(16px, calc((100% - 1200px) / 2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .rescue-brand {
@@ -49,7 +50,7 @@
 }
 
 .rescue-brand span {
-  color: var(--rescue-navy);
+  color: #fff;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -97,14 +98,15 @@
 .welcome-panel {
   position: relative;
   display: grid;
-  min-height: 690px;
+  width: 100%;
+  min-height: calc(100vh - 88px);
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: 28px 40px;
   padding: clamp(24px, 5vw, 58px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 25px;
+  border: 0;
+  border-radius: 0;
   color: #fff;
   background:
     radial-gradient(circle at 75% 34%, rgba(52, 120, 199, 0.33), transparent 28%),
@@ -699,13 +701,12 @@
 }
 
 @media (max-width: 760px) {
-  .rescue-app { padding: 0 14px 18px; }
-  .rescue-header { min-height: 72px; }
+  .rescue-header { min-height: 72px; padding-inline: 14px; }
   .rescue-brand img { width: 48px; height: 40px; }
   .rescue-brand span { max-width: 115px; font-size: 8px; }
   .icon-control { min-height: 38px; padding: 7px 9px; font-size: 12px; }
   .icon-control span { display: none; }
-  .welcome-panel { grid-template-columns: 1fr; gap: 18px; padding: 26px 22px; }
+  .welcome-panel { min-height: calc(100vh - 72px); grid-template-columns: 1fr; gap: 18px; padding: 26px 22px; }
   .welcome-copy { order: 0; }
   .welcome-art { min-height: 235px; order: 1; }
   .art-ring { width: 205px; }
@@ -728,7 +729,7 @@
 }
 
 @media (max-width: 480px) {
-  .welcome-panel,.game-shell,.result-panel,.between-panel,.skills-explorer { margin-block: 16px; }
+  .game-shell,.result-panel,.between-panel,.skills-explorer { margin-block: 16px; }
   .welcome-copy h1 { font-size: 46px; }
   .welcome-copy .story { font-size: 16px; }
   .duration-chip { display: block; margin: 12px 0 0; }
